@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
 
         String input = "resources/file_in.txt";
-        String out = "resources/file_out.txt";
+        String output = "resources/file_out.txt";
 
         ReaderService readerService;
         WriterService writerService;
@@ -23,7 +23,7 @@ public class Main {
         try {
             readerService = new ReaderService(input, new ParserService());
             dataList = readerService.takeDataList();
-            writerService = new WriterService(out, dataList);
+            writerService = new WriterService(output, dataList);
             boolean finish = writerService.save();
             System.out.println(finish);
 
